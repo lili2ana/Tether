@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f3f4f8;
+  --surface: #ffffff;
+  --ink: #12131a;
+  --muted: #6a6f82;
+  --accent: #4f6dff;
+}
+
+body {
+  background: radial-gradient(circle at top, #ece8ff 0%, #eef3ff 30%, #f5f7fb 60%, #f3f4f8 100%);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+.soft-shell {
+  backdrop-filter: blur(10px);
+  background: color-mix(in srgb, white 88%, #d8dcff 12%);
+}
