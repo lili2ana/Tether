@@ -1,30 +1,25 @@
-export default function Home() {
-  const modules = [
-    ['Lead Factory', 'Find and rank motivated seller opportunities'],
-    ['Property Intelligence', 'Research ownership, parcel, tax, GIS and market signals'],
-    ['Deal Analyzer', 'Estimate value, MAO, risk, spread and ROI'],
-    ['Seller Pipeline', 'Track outreach, responses and follow-up'],
-    ['Buyer Pipeline', 'Build and rank the disposition network'],
-    ['Automation Monitor', 'Watch jobs, integrations and failures'],
-  ]
+const dashboardUrl = 'https://bnsmnztxkqmphvbikaxh.supabase.co/functions/v1/god-mode-dashboard';
 
+export default async function Home() {
   return (
-    <main style={{fontFamily:'system-ui',maxWidth:1200,margin:'0 auto',padding:'48px 24px'}}>
-      <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',gap:20}}>
-        <div>
-          <p style={{letterSpacing:2,fontWeight:700}}>REAL ESTATE GOD MODE</p>
-          <h1 style={{fontSize:48,margin:'8px 0'}}>Find the money. Build the machine.</h1>
-          <p style={{fontSize:20,maxWidth:760}}>AI-operated acquisition command center. Initial market: Polk County, Florida.</p>
+    <main>
+      <section className="hero">
+        <div className="eyebrow">POLK COUNTY • LAKE WALES FIRST MARKET</div>
+        <h1>REAL ESTATE GOD MODE</h1>
+        <p>Acquisition intelligence for land and residential opportunities.</p>
+        <div className="grid">
+          <article><strong>36,698</strong><span>Parcels Ingested</span></article>
+          <article><strong>18,599</strong><span>Land Parcels</span></article>
+          <article><strong>16,698</strong><span>Residential Parcels</span></article>
+          <article><strong>1,791</strong><span>High-Scoring Candidates</span></article>
         </div>
-        <div style={{padding:16,border:'1px solid #ddd',borderRadius:14}}>STATUS<br/><strong>BUILDING</strong></div>
-      </div>
-      <section style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:16,marginTop:40}}>
-        {modules.map(([title,desc]) => <article key={title} style={{border:'1px solid #ddd',borderRadius:16,padding:22}}><h2>{title}</h2><p>{desc}</p><small>READY FOR INTEGRATION</small></article>)}
-      </section>
-      <section style={{marginTop:40,padding:24,borderRadius:16,border:'2px solid #111'}}>
-        <h2>CEO Command Console</h2>
-        <p>Next command: investigate the highest-value Polk County opportunities and feed verified leads into the acquisition pipeline.</p>
+        <div className="status">
+          <h2>System Status</h2>
+          <p>County ingestion, classification, scoring, lead generation, buyer matching, and daily refresh are active.</p>
+          <p>Seller outreach remains gated pending enrichment and underwriting.</p>
+          <a href={dashboardUrl}>Open live aggregate data source</a>
+        </div>
       </section>
     </main>
-  )
+  );
 }
